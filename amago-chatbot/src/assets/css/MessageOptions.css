@@ -1,0 +1,15 @@
+.optionContainer{
+    border: 1px solid #00C6FF;
+    border-radius: 20px;
+    cursor: pointer;
+    margin: 2px;
+    font-size: 14px;
+    padding: 10px;
+}
+.optionContainer p{
+    margin: 0;
+}
+.optionContainer:hover{
+    background-color: #00C6FF;
+    color: #fff;
+}

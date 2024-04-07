@@ -1,0 +1,46 @@
+.side-pane {
+    position: fixed;
+    width: 25%;
+    height: 100%;
+    visibility: hidden;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+    background-color: #fff;
+    box-shadow: 0 0 14px #a8b3bf;
+    transition: right 0.3s ease;
+}
+
+.open-pane{
+    visibility: visible;
+}
+
+.close-button {
+    color: #fff;
+    font-size: 25px;
+    padding: 3px;
+    scale: 1;
+    position: absolute;
+    top: 10px;
+    cursor: pointer;
+}
+
+.close-button:hover{
+    scale: 1.1;
+}
+
+.close-button-headpane {
+    padding: 0.5rem 1rem;
+    height: 3.5rem;
+    background-color: #343A40;
+}
+.content {
+    padding: 10px;
+    height: 94%;
+}
+
+@media only screen and (max-width: 600px) {
+    .side-pane {
+        width: 100%;
+    }
+}
