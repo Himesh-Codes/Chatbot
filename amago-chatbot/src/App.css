@@ -4,6 +4,7 @@
 @import url("./assets/css/InputField.css");
 @import url("./assets/css/Message.css");
 @import url("./assets/css/MessageOptions.css");
+@import url("./assets/css/MessageAPIResponse.css");
 
 #root {
   width: 100%;

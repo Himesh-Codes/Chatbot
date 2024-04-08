@@ -5,6 +5,7 @@ import { MESSAGE_OPTIONS, MESSAGE_OPTION_SUBJECT, OPTION_AVAILABLE_CONTEXTS } fr
 import { IMessageTileProp, IMessages } from "../interfaces/IMessages";
 import MessageOption from "./MessageOption";
 import { MIN_WORDS_MESSAGE_PER_TWENTY_MS_SPEED } from "../constant/AppConstant";
+import MessageAPIResponse from "./MessageAPIResponse";
 
 export default function MessageTile(messageTileProp: IMessageTileProp) : React.JSX.Element {
     const messages: IMessages = messageTileProp.messages;
@@ -49,6 +50,15 @@ export default function MessageTile(messageTileProp: IMessageTileProp) : React.J
                     </div>
                     <div className="message-content-bot p-2">  
                         {displayText}
+                        <div>
+                            {
+                                messages.apiResponse ? (
+                                    <MessageAPIResponse {...messages.apiResponse}/>
+                                ) : (
+                                    <></>
+                                )
+                            }
+                        </div>
                     </div>
                     {
                         OPTION_AVAILABLE_CONTEXTS.includes(messageType) ? (
@@ -60,13 +70,10 @@ export default function MessageTile(messageTileProp: IMessageTileProp) : React.J
                                     {messageOptionsDom}
                                 </div>
                             </>
-                            
                         ) : (
                            <></>
                         )
                     }
-                    
-                    
                 </div>
 
              ) : (

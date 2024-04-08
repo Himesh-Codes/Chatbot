@@ -35,7 +35,7 @@ export function GetInitialLoadMessage() : IMessages {
 function checkWaitAndAddMessage(messages: IMessages[], actions: IMessageActions, apiLoading: boolean): IMessages[] {
     const messageType = (actions.operation as AddMesageProp).message.messageType ? (actions.operation as AddMesageProp).message.messageType  : "";
     if (!apiLoading) {
-        return [...messages, {id:(actions.operation as AddMesageProp).message.id,content:(actions.operation as AddMesageProp).message.content, isBot: (actions.operation as AddMesageProp).message.isBot, messageType: messageType}];
+        return [...messages, {id:(actions.operation as AddMesageProp).message.id,content:(actions.operation as AddMesageProp).message.content, isBot: (actions.operation as AddMesageProp).message.isBot, messageType: messageType, apiResponse:(actions.operation as AddMesageProp).message.apiResponse}];
     }
     return messages;
 }
