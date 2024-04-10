@@ -12,9 +12,9 @@ export const MESSAGE_STEPS: Record<string, IMessageStep> = {
 
 export const OPTION_AVAILABLE_CONTEXTS = ["reply_greeting_or_unable_to_ans"];
 
-const APPEND_TICKET_MESSAGE_CONTENT = " for a month give me your resolver group name (Note: Enter the resolver group name alone).";
+const APPEND_TICKET_MESSAGE_CONTENT = " for the previous month give me your resolver group name (Note: Enter the resolver group name alone).";
 export const MESSAGE_OPTIONS: Record<string, IMessageOption> = {
-    "ticket_resolved" : {name: "Tickets Resolved", url:"", message: "For getting the ticket resolved" + APPEND_TICKET_MESSAGE_CONTENT, nextStep: MESSAGE_STEPS["after_ask_resolver_group_ask_month"], handler: ticketResolvedHandler},
+    "ticket_resolved" : {name: "Tickets Metrics", url:"", message: "For getting the ticket metrics" + APPEND_TICKET_MESSAGE_CONTENT, nextStep: MESSAGE_STEPS["after_ask_resolver_group_ask_month"], handler: ticketResolvedHandler},
     "ticket_priority" : {name: "Get The Ticket Priorities", url:"", message: "For getting the ticket priority" + APPEND_TICKET_MESSAGE_CONTENT, nextStep: null, handler: ticketPriorityHandler}
 }
 
@@ -26,5 +26,5 @@ export enum WORKFLOW_STEPS {
 }
 
 export const MESSAGE_OPTION_SUBJECT: string = "Click on any of the below options to get more details!";
-export const TICKET_RESOLVED_RESPONSE_SUBJECT: string = "Please find the tickets resolved details below;";
+export const TICKET_RESOLVED_RESPONSE_SUBJECT: string = "Please find the tickets metrics details below;";
 
