@@ -6,6 +6,8 @@ export const REPLY_BOT_GREETING = "Hello, Good Day! How can I assist you today?"
 export const BOT_UNABLE_TO_ANSWER_DEFAULT_MESSAGE = "Thank you for your query. Unfortunately, I am unable to provide an answer to this question at the moment. If you have any other inquiries or require assistance on a different topic, please don't hesitate to ask, and I'll be happy to help.";
 export const WELCOME_GREETING: string = "Welcome to AMAGO, your ultimate productivity companion! 🚀 Whether you're looking to streamline your workflow, boost your efficiency, or simply organize your tasks, I'm here to help. Let's supercharge your productivity together! How can I assist you today?";
 
+export const TICKET_METRICS_MSG = "Are you interested in viewing ticket metrics for your resolver group over the past month? I can provide you the details on that. Just let me know if you'd like to proceed!";
+
 export const MESSAGE_STEPS: Record<string, IMessageStep> = {
     "after_ask_resolver_group_ask_month" : {url:"", message: "For which month you need the ticket data ", nextStep: "", handler: ticketResolvedHandler}
 }
