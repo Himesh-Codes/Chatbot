@@ -1,10 +1,13 @@
+import { IWorkFlow } from "../interfaces/IWorkFlows";
+import { ticketMetrics } from "./TicketMetricsWorkFlow";
+
 class WorkFlowProvider {
     private static workFlowProvider: WorkFlowProvider | null = null;
-    private workFlows: string[] = [];
+    private workFlows: IWorkFlow<any>[] = [];
 
     private constructor() {
         WorkFlowProvider.workFlowProvider = new WorkFlowProvider();
-        this.workFlows = ["sdds"];
+        this.workFlows = [ticketMetrics];
     }
 
     public static getInstance(){
